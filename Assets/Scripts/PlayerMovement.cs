@@ -7,8 +7,9 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody rb;
     public float fowardforce;
     public Transform tr;
-    public float scalex;
-
+    public float CameraMovement;
+    public Transform camera1;
+    
 
     void FixedUpdate()
     {
@@ -30,8 +31,8 @@ public class PlayerMovement : MonoBehaviour
             fowardforce += 20000 * Time.deltaTime;
 
         }
-        scalex = fowardforce / 40400 + 1;
-        tr.localScale = new Vector3(scalex, 1, 1);
+        
+        
 
 
     }

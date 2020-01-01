@@ -18,9 +18,9 @@ public class JoystickMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        vertical += variableJoystick.Vertical * 90 * Time.deltaTime;
-        orizontal += variableJoystick.Horizontal * 90 * Time.deltaTime;
-        tr.rotation = new Vector3(vertical, orizontal, 0);
+        vertical += variableJoystick.Vertical * 80 * Time.deltaTime;
+        orizontal += variableJoystick.Horizontal * 80 * Time.deltaTime;
+        tr.eulerAngles = new Vector3(-vertical, orizontal, 0);
         
     }
 }
