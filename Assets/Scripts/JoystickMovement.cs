@@ -20,7 +20,8 @@ public class JoystickMovement : MonoBehaviour
     {
         vertical += variableJoystick.Vertical * 80 * Time.deltaTime;
         orizontal += variableJoystick.Horizontal * 80 * Time.deltaTime;
-        tr.eulerAngles = new Vector3(-vertical, orizontal, 0);
+        tr.eulerAngles = new Vector3(-vertical, orizontal, variableJoystick.Horizontal*-5);
+        
         
     }
 }

@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform tr;
     public float CameraMovement;
     public Transform camera1;
-    
+    public FixedJoystick variableJoystick;
 
     void FixedUpdate()
     {
@@ -26,12 +26,12 @@ public class PlayerMovement : MonoBehaviour
             fowardforce = 0;
         }
         rb.AddForce(transform.forward * fowardforce * Time.deltaTime);
-        if (Input.GetKey(KeyCode.W))
+        if (variableJoystick.Horizontal != 0 && variableJoystick.Vertical != 0)
         {
             fowardforce += 20000 * Time.deltaTime;
 
         }
-
+        
         
         
 
