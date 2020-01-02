@@ -1,14 +1,26 @@
 fileFormatVersion: 2
-guid: 19e074ef37d2b0648838430fb24914fe
+guid: b794222822a8cbb4d93c05f122e64c51
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable:
   - first:
-      74: -6392692997497748430
-    second: Armature|Forward flight
+      74: -923852786569919836
+    second: Armature|Forward
   - first:
-      74: -3609196466992420287
-    second: Armature|Forward movement
+      74: -5742113246664979595
+    second: Armature|hit
+  - first:
+      74: 2515818476863114300
+    second: Armature|PointAction
+  - first:
+      74: 9187974378094590
+    second: Armature|PointAction.001
+  - first:
+      74: -4262949057267349280
+    second: Armature|PointAction.002
+  - first:
+      74: -280351470764646712
+    second: Armature|right
   externalObjects: {}
   materials:
     materialImportMode: 1
