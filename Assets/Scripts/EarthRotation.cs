@@ -12,9 +12,9 @@ public class EarthRotation : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         transform.eulerAngles = new Vector3(transform.rotation.x, rotationint, transform.rotation.z);
-        rotationint -= 8 * Time.deltaTime;
+        rotationint -= 8*Time.deltaTime;
     }
 }
