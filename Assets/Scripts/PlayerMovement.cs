@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (fowardforce > 0)
         {
-            fowardforce -= 8000 * Time.deltaTime;
+            fowardforce -= 10000 * Time.deltaTime;
         }
         if (fowardforce > 40000)
         {
