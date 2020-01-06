@@ -663,10 +663,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: ba53a249-6f06-4bc4-a580-0c32c2f30c5a
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: SpaceProject
+  organizationId: bearstrikegames
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
