@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if(timer1 != 0f)
         {
-            leftforce += 160000 * Time.deltaTime;
+            leftforce += 1000000 * Time.deltaTime;
            
         }
         if(timer1 <= 0)
@@ -79,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if(timer2 != 0f)
         {
-            rightforce += 160000 * Time.deltaTime;
+            rightforce += 1000000 * Time.deltaTime;
            
         }
         if(timer2 <= 0)
@@ -93,11 +93,11 @@ public class PlayerMovement : MonoBehaviour
     }
     public void left()
     {       
-        timer1 = 2f;
+        timer1 = 1f;
     }
     public void right()
     {
-        timer2 = 2f;
+        timer2 = 1f;
     }
 
 }
