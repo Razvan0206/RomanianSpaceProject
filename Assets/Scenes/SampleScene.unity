@@ -405,6 +405,36 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &153581948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 153581949}
+  m_Layer: 0
+  m_Name: ShotPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &153581949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153581948}
+  m_LocalRotation: {x: 0.50000006, y: -0.5, z: -0.5, w: 0.50000006}
+  m_LocalPosition: {x: -0.009334536, y: 0.00041080246, z: -0.00004966676}
+  m_LocalScale: {x: 0.009999997, y: 0.009999997, z: 0.009999997}
+  m_Children: []
+  m_Father: {fileID: 1608933283}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &283853343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1246,6 +1276,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4673276, y: 1, z: 4.715179}
   m_Center: {x: -1.1054368, y: 0, z: -2.1889775}
+--- !u!114 &690978418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690978413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 650834ba7ea201e4491e58b52dfd7b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletPrefab: {fileID: 3826685171343319334, guid: 1830d8e5fe017704293f6db3f6a266cf,
+    type: 3}
+  ShotPos: {fileID: 153581949}
 --- !u!1 &878182928 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
@@ -1778,6 +1823,12 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!4 &1608933283 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -444521105353760620, guid: 9f7b1237e7e37c54c9f9fcd74bbbd5f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1362831431}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1621771793
 GameObject:
   m_ObjectHideFlags: 0

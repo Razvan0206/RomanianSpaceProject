@@ -8,22 +8,14 @@ public class Bullet : MonoBehaviour
     public float lifeDuration = 2f;
 
     private float lifeTimer;
-
-
+    public Rigidbody rb;
     private void Start()
     {
         lifeTimer = lifeDuration;
     }
-
-
-
     void Update()
     {
-        transform.position += transform.forward * speed * Time.deltaTime;
-        lifeTimer = -Time.deltaTime;
-        if (lifeTimer <= 0f)
-        {
-            Destroy(gameObject);
-        }
+        rb.AddForce(transform.forward * speed * Time.deltaTime);
+       
     }
 }
