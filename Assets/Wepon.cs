@@ -10,16 +10,18 @@ public class Wepon : MonoBehaviour
     public Transform ShotPos;
 
 
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            GameObject bulletobject = Instantiate(BulletPrefab);
-            bulletobject.transform.position = ShotPos.transform.position;
-            bulletobject.transform.position = ShotPos.transform.forward;
-        }
-    }
 
+    public void shoot()
+    {
+        
+        BulletPrefab.transform.position = ShotPos.transform.position;
+        BulletPrefab.transform.eulerAngles = ShotPos.transform.eulerAngles;
+        Invoke("ActualShoot", 0f);
+    }
+    public void ActualShoot()
+    {
+        GameObject bulletobject = Instantiate(BulletPrefab);
+    }
 
 
 
