@@ -14,9 +14,18 @@ public class PlayerMovement : MonoBehaviour
     public float CameraMovement;
     public Transform camera1;
     public FixedJoystick variableJoystick;
+    public bool go;
 
     void FixedUpdate()
     {
+        if(Input.GetKeyDown("w"))
+        {
+            go = true;
+        }
+        if(Input.GetKeyUp("w"))
+        {
+            go = false;
+        }
         timer1 -= Time.deltaTime;
         if(timer1 < 0f)
         {
@@ -35,18 +44,21 @@ public class PlayerMovement : MonoBehaviour
         {
             fowardforce = 0;
         }
-        if (fowardforce > 40000)
+        if (fowardforce > 20000)
         {
-            fowardforce = 40000;
+            fowardforce = 20000;
         }
         
         rb.AddForce(transform.forward * fowardforce * Time.deltaTime);
         rb.AddForce(transform.right * -leftforce * Time.deltaTime);
         rb.AddForce(transform.right * rightforce * Time.deltaTime);
-        if (variableJoystick.Horizontal != 0 && variableJoystick.Vertical != 0)
+        
+        if(go == true)
         {
             fowardforce += 20000 * Time.deltaTime;
         }
+            
+        
         
         //left
         
@@ -54,9 +66,9 @@ public class PlayerMovement : MonoBehaviour
         {
             leftforce = 0;
         }
-        if (leftforce > 160000)
+        if (leftforce > 40000)
         {
-            leftforce = 160000;
+            leftforce = 40000;
         }
         if(timer1 != 0f)
         {
@@ -73,9 +85,9 @@ public class PlayerMovement : MonoBehaviour
         {
             rightforce = 0;
         }
-        if (rightforce > 160000)
+        if (rightforce > 40000)
         {
-            rightforce = 160000;
+            rightforce = 40000;
         }
         if(timer2 != 0f)
         {
@@ -98,6 +110,14 @@ public class PlayerMovement : MonoBehaviour
     public void right()
     {
         timer2 = 1f;
+    }
+    public void Go()
+    {  
+        go = true;
+    }
+    public void stop()
+    {  
+        go = false;
     }
 
 }

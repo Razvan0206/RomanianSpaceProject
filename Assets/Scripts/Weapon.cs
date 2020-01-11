@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Wepon : MonoBehaviour
+public class Weapon : MonoBehaviour
 {
 
 
@@ -16,12 +16,14 @@ public class Wepon : MonoBehaviour
         
         BulletPrefab.transform.position = ShotPos.transform.position;
         BulletPrefab.transform.eulerAngles = ShotPos.transform.eulerAngles;
-        Invoke("ActualShoot", 0f);
+        ActualShoot();
+        
     }
     public void ActualShoot()
     {
         GameObject bulletobject = Instantiate(BulletPrefab);
     }
+    
 
 
 

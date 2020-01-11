@@ -12,10 +12,15 @@ public class Bullet : MonoBehaviour
     private void Start()
     {
         lifeTimer = lifeDuration;
+        Invoke ("Delete", 10f);
     }
     void Update()
     {
         rb.AddForce(transform.forward * speed * Time.deltaTime);
        
+    }
+    void Delete()
+    {
+        Destroy(gameObject);
     }
 }
