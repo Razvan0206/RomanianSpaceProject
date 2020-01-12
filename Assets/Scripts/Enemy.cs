@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     [SerializeField]Transform target;
     
@@ -25,8 +25,7 @@ public class EnemyMovement : MonoBehaviour
         BulletPrefab.transform.eulerAngles = ShotPos.transform.eulerAngles;
         if(Physics.Raycast(transform.position, fwd, out hit, 100f) && hit.transform.tag == "Player")
         {
-            if(Time.time>=nextUpdate){
-             Debug.Log(Time.time+">="+nextUpdate);
+            if(Time.time>=nextUpdate){ 
              nextUpdate=Mathf.FloorToInt(Time.time)+1;            
              Shoot();
             }   

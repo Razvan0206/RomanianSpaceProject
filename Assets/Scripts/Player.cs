@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class PlayerMovement : MonoBehaviour
+public class Player : MonoBehaviour
 {
     public Rigidbody rb;
     public float fowardforce;
     public float leftforce;
     public float rightforce;
+    public int hp = 100;
     float timer1 = 0.0f;
     float timer2 = 0.0f;
     public Transform tr;
@@ -15,9 +17,15 @@ public class PlayerMovement : MonoBehaviour
     public Transform camera1;
     public FixedJoystick variableJoystick;
     public bool go;
+    public Text hptext;
 
+    void Update()
+    {
+        hptext.text = hp.ToString();
+    }
     void FixedUpdate()
     {
+       
         if(Input.GetKeyDown("w"))
         {
             go = true;
@@ -101,6 +109,16 @@ public class PlayerMovement : MonoBehaviour
         
         
 
+
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        
+        if(other.gameObject.tag == "Bullet")
+        {
+            hp -= 1;           
+        }
+        Destroy(other.gameObject);
 
     }
     public void left()
