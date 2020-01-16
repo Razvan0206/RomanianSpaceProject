@@ -18,10 +18,33 @@ public class Player : MonoBehaviour
     public FixedJoystick variableJoystick;
     public bool go;
     public Text hptext;
+    public float maxspeed = 25000;
+    bool counter;
+    float counterfloat = 10f;
 
+    public Button DashButton;
     void Update()
     {
         hptext.text = hp.ToString();
+        counterfloat += Time.deltaTime;
+        if(counterfloat > 10)
+        {
+            counter = true;
+        }
+        if(counterfloat < 10)
+        {
+            counter = false;
+        }
+        if(counter == true)
+        {
+            DashButton.interactable = true;
+
+        }
+        if(counter == false)
+        {
+            DashButton.interactable = false;
+            
+        }
     }
     void FixedUpdate()
     {
@@ -52,9 +75,9 @@ public class Player : MonoBehaviour
         {
             fowardforce = 0;
         }
-        if (fowardforce > 20000)
+        if (fowardforce > maxspeed)
         {
-            fowardforce = 20000;
+            fowardforce = maxspeed;
         }
         
         rb.AddForce(transform.forward * fowardforce * Time.deltaTime);
@@ -136,6 +159,16 @@ public class Player : MonoBehaviour
     public void stop()
     {  
         go = false;
+    }
+    public void Dash()
+    {
+        if(counter == true)
+        {
+            maxspeed = 100000;
+            fowardforce += 100000;
+            counterfloat = 0;
+        }
+        
     }
 
 }

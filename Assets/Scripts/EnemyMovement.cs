@@ -1,17 +1,17 @@
-﻿using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
     [SerializeField]Transform target;
+    
     [SerializeField] float rotationalDamp;
     [SerializeField] float movementSpeed;
     public float distance;
     public GameObject BulletPrefab;
     public Transform ShotPos;
     private int nextUpdate=1;
-    
     void Start()
     {
 
@@ -23,9 +23,10 @@ public class Enemy : MonoBehaviour
         RaycastHit hit;
         BulletPrefab.transform.position = ShotPos.transform.position;
         BulletPrefab.transform.eulerAngles = ShotPos.transform.eulerAngles;
-        if(Physics.Raycast(transform.position, fwd, out hit, 1000f) && hit.transform.tag == "Player")
+        if(Physics.Raycast(transform.position, fwd, out hit, 100f) && hit.transform.tag == "Player")
         {
-            if(Time.time>=nextUpdate){ 
+            if(Time.time>=nextUpdate){
+             Debug.Log(Time.time+">="+nextUpdate);
              nextUpdate=Mathf.FloorToInt(Time.time)+1;            
              Shoot();
             }   
