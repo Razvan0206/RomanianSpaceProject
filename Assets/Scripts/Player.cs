@@ -69,7 +69,7 @@ public class Player : MonoBehaviour
         }
         if (fowardforce > 0)
         {
-            fowardforce -= 10000 * Time.deltaTime;
+            fowardforce -= 15000 * Time.deltaTime;
         }
         if (fowardforce < 0)
         {
@@ -86,7 +86,7 @@ public class Player : MonoBehaviour
         
         if(go == true)
         {
-            fowardforce += 20000 * Time.deltaTime;
+            fowardforce += 25000 * Time.deltaTime;
         }
             
         
@@ -97,9 +97,9 @@ public class Player : MonoBehaviour
         {
             leftforce = 0;
         }
-        if (leftforce > 40000)
+        if (leftforce > 50000)
         {
-            leftforce = 40000;
+            leftforce = 50000;
         }
         if(timer1 != 0f)
         {
@@ -116,9 +116,9 @@ public class Player : MonoBehaviour
         {
             rightforce = 0;
         }
-        if (rightforce > 40000)
+        if (rightforce > 50000)
         {
-            rightforce = 40000;
+            rightforce = 50000;
         }
         if(timer2 != 0f)
         {
