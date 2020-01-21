@@ -11,13 +11,29 @@ public class Enemy : MonoBehaviour
     public GameObject BulletPrefab;
     public Transform ShotPos;
     private int nextUpdate=1;
+    int hp = 5;
     
     void Start()
     {
 
     }
+    void OnTriggerEnter(Collider other)
+    {
+        
+        if(other.gameObject.tag == "Bullet")
+        {
+            hp -= 1;           
+        }
+        Destroy(other.gameObject);
+
+    }
     void Update()
     {
+        if(hp <= 0)        
+        {
+            Destroy(this.gameObject);
+
+        }
         var fwd = transform.TransformDirection (Vector3.forward);
         Ray ray = new Ray (transform.position, transform.forward);
         RaycastHit hit;
