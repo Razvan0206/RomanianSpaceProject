@@ -21,10 +21,18 @@ public class Player : MonoBehaviour
     public float maxspeed = 25000;
     bool counter;
     float counterfloat = 10f;
+    public ParticleSystem SpeedParticles;
 
     public Button DashButton;
+    void Start()
+    {
+        
+
+    }
     void Update()
     {
+        
+        
         hptext.text = hp.ToString();
         counterfloat += Time.deltaTime;
         if(counterfloat > 10)
@@ -43,7 +51,14 @@ public class Player : MonoBehaviour
         if(counter == false)
         {
             DashButton.interactable = false;
-            
+        }
+        if(fowardforce > 20000f)
+        {
+            SpeedParticles.startSpeed = fowardforce / 1000;
+        }
+        if(fowardforce < 20000f)
+        {    
+            SpeedParticles.startSpeed = 0;
         }
     }
     void FixedUpdate()
