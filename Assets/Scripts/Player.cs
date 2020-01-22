@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     public FixedJoystick variableJoystick;
     public bool go;
     public Text hptext;
-    public float maxspeed = 25000;
+    public float maxspeed = 30000;
     bool counter;
     float counterfloat = 10f;
     public ParticleSystem SpeedParticles;
@@ -52,13 +52,17 @@ public class Player : MonoBehaviour
         {
             DashButton.interactable = false;
         }
-        if(fowardforce > 20000f)
+        if(fowardforce > 30000f)
         {
-            SpeedParticles.startSpeed = fowardforce / 1000;
+            
+            SpeedParticles.Play();
+            
         }
-        if(fowardforce < 20000f)
+        if(fowardforce < 30000f)
         {    
-            SpeedParticles.startSpeed = 0;
+            
+            SpeedParticles.Stop();
+            
         }
     }
     void FixedUpdate()
@@ -182,8 +186,15 @@ public class Player : MonoBehaviour
             maxspeed = 100000;
             fowardforce += 100000;
             counterfloat = 0;
+            Invoke("voidmaxspeed", 2.5f);
         }
         
     }
+    void voidmaxspeed()
+    {
+        maxspeed = 30000;
+
+    }
+
 
 }
