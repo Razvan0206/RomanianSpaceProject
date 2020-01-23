@@ -6132,7 +6132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650834ba7ea201e4491e58b52dfd7b8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletPrefab: {fileID: 3826685171343319334, guid: 1830d8e5fe017704293f6db3f6a266cf,
+  BulletPrefab: {fileID: 4148814866576902619, guid: 739e922bacad32b49abbcd1b328be862,
     type: 3}
   shotPos: {fileID: 153581949}
   aimAssistRect: {x: 500, y: 500}
@@ -6399,6 +6399,12 @@ PrefabInstance:
       propertyPath: rotationalDamp
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5684980168815421696, guid: e35729748c45f504bb88dafc5e385c74,
+        type: 3}
+      propertyPath: BulletPrefab
+      value: 
+      objectReference: {fileID: 4148814866576902619, guid: 739e922bacad32b49abbcd1b328be862,
+        type: 3}
     - target: {fileID: 5684980168815421703, guid: e35729748c45f504bb88dafc5e385c74,
         type: 3}
       propertyPath: m_Name
@@ -7816,6 +7822,17 @@ PrefabInstance:
         type: 3}
       propertyPath: rotationalDamp
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5684980168815421696, guid: e35729748c45f504bb88dafc5e385c74,
+        type: 3}
+      propertyPath: BulletPrefab
+      value: 
+      objectReference: {fileID: 4148814866576902619, guid: 739e922bacad32b49abbcd1b328be862,
+        type: 3}
+    - target: {fileID: 5684980168815421697, guid: e35729748c45f504bb88dafc5e385c74,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5684980168815421703, guid: e35729748c45f504bb88dafc5e385c74,
         type: 3}
