@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3825942881121709105}
   - component: {fileID: 350199739889120312}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Bullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,8 +29,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4148814866576902619}
-  m_LocalRotation: {x: -0.0004657727, y: -0.38486812, z: -0.00019422169, w: 0.9229714}
-  m_LocalPosition: {x: 16.05088, y: -0.022844125, z: -15.89979}
+  m_LocalRotation: {x: -0.021032432, y: -0.11237541, z: -0.0023791352, w: 0.99344033}
+  m_LocalPosition: {x: -43.478256, y: -7.5593643, z: 110.99307}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
