@@ -12,6 +12,8 @@ public class Enemy : MonoBehaviour
     public Transform ShotPos;
     private int nextUpdate=1;
     int hp = 5;
+    public AudioSource BulletAudio;
+    
     
     void Start()
     {
@@ -69,5 +71,6 @@ public class Enemy : MonoBehaviour
     void Shoot()
     {
         GameObject bulletobject = Instantiate(BulletPrefab);
+        BulletAudio.Play();
     }
 }

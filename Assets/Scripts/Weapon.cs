@@ -20,6 +20,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] private Vector2 aimAssistRect = new Vector2(500, 500);
     private Vector2 screenCentre;
     private Vector2 enemyPointOnScreen;
+    public AudioSource BulletAudio;
 
     private void Start()
     {
@@ -27,6 +28,7 @@ public class Weapon : MonoBehaviour
     }
     public void Shoot()
     {
+        BulletAudio.Play();
         enemiesInMap = GameObject.FindGameObjectsWithTag("Enemy");
         minDistance = 9999;
         nearestEnemyToScreenCentre = null;

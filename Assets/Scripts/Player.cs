@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     public ParticleSystem SpeedParticles;
 
     public Button DashButton;
+    
     void Start()
     {
         
