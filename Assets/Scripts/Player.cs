@@ -160,9 +160,10 @@ public class Player : MonoBehaviour
         
         if(other.gameObject.tag == "Enemy Bullet")
         {
-            hp -= 1;           
+            hp -= 1; 
+            Destroy(other.gameObject);          
         }
-        Destroy(other.gameObject);
+        
 
     }
     public void left()

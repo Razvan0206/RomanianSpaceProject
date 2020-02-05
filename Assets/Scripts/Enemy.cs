@@ -24,9 +24,10 @@ public class Enemy : MonoBehaviour
         
         if(other.gameObject.tag == "Bullet")
         {
-            hp -= 1;           
+            hp -= 1;       
+            Destroy(other.gameObject);    
         }
-        Destroy(other.gameObject);
+        
 
     }
     void Update()
